@@ -27,6 +27,6 @@ final class Bike {
 
     @Override
     public String toString() {
-        return "Bike id = " + id.value() + " modell = " + modell;
+        return "\nBike id = " + id.value() + " modell = " + modell;
     }
 }

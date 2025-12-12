@@ -13,6 +13,6 @@ public class Main {
 
         Bike.deleteById(new ValueObjekt("B2"));
 
-        System.out.println("After deleting B2, All Bikes: " + Bike.listAll());
+        System.out.println("\nAfter deleting B2, All Bikes: " + Bike.listAll());
     }
 }
