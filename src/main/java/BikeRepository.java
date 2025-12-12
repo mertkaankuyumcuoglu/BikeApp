@@ -1,18 +1,18 @@
 /**
- * Repository für Click-&-Collect-Bestellungen.
+ * Repository für Bike Modelle.
  * Verantwortlich für Anlegen, Lesen, Löschen, Auflisten.
  * Invariante: Methoden geben niemals null zurück (Listen ggf. leer).
  */
-public interface OrderRepository {
+public interface BikeRepository {
 
     /**
      * Legt eine Bestellung an oder aktualisiert sie.
      *
-     * @param order darf nicht null sein; auch order.id darf nicht null (und nicht leer) sein
+     * @param bike darf nicht null sein; auch bike.id darf nicht null (und nicht leer) sein
      * @return true, wenn neu angelegt; false, wenn bestehende Bestellung aktualisiert wurde
-     * @throws IllegalArgumentException wenn order oder order.id null/leer sind
+     * @throws IllegalArgumentException wenn bike oder bike.id null/leer sind
      */
-    boolean save(Order order);
+    boolean save(Bike bike);
 
     /**
      * Liefert die Bestellung zur ID oder signalisiert, dass sie nicht existiert.
@@ -22,7 +22,7 @@ public interface OrderRepository {
      * @throws IllegalArgumentException wenn id null/leer ist
      * @throws java.util.NoSuchElementException wenn keine Bestellung zu dieser id existiert
      */
-    Order getByIdOrThrow(String id);
+    Bike getByIdOrThrow(ValueObjekt id);
 
     /**
      * Löscht die Bestellung zur ID.
@@ -31,12 +31,12 @@ public interface OrderRepository {
      * @return true, wenn gelöscht; false, wenn keine Bestellung vorhanden (Business, keine Exception)
      * @throws IllegalArgumentException wenn id null/leer ist
      */
-    boolean deleteById(String id);
+    boolean deleteById(ValueObjekt id);
 
     /**
      * Gibt alle Bestellungen in Einfügereihenfolge zurück.
      *
      * @return nie null; ggf. leere Liste
      */
-    java.util.List<Order> listAll();
+    java.util.List<Bike> listAll();
 }
