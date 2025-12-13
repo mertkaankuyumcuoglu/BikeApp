@@ -2,11 +2,10 @@
  * Minimales Domain-Objekt für Bike-Modell.
  * Einheiten:
  * - modell als String.
- *
  * Contract:
  * - modell darf nicht null/leer sein.
  */
-final class Bike {
+public final class Bike {
     ValueObjekt id;
     final String modell;
 
@@ -14,19 +13,19 @@ final class Bike {
      * Konstruktor für Bike-Objekt.
      *
      * @param id
+     * ID des Bikes als ValueObjekt.
+     *
      * @param modell
+     * Modell des Bikes als String.
      */
     public Bike(String id, String modell) {
         this.id = new ValueObjekt(id);
         this.modell = modell;
     }
 
-    public String getId() {
-        return id.value();
-    }
-
+    // String-Repräsentation des Bike-Objekts.
     @Override
     public String toString() {
-        return "\nBike id = " + id.value() + " modell = " + modell;
+        return "\nBike id = " + id.value() + ", Modell = " + modell;
     }
 }
