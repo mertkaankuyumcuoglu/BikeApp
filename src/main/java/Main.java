@@ -14,5 +14,7 @@ public class Main {
         Bike.deleteById(new ValueObjekt("B2"));
 
         System.out.println("\nAfter deleting B2, All Bikes: " + Bike.listAll());
+
+        System.out.println("\nGet Bike by ID B1: " + Bike.getByIdOrThrow(new ValueObjekt("B1")));
     }
 }
